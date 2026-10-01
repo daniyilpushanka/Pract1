@@ -1,0 +1,30 @@
+def calculate(a, b):
+    if a > b:
+        x = a * b - 1
+    elif a == b:
+        x = 255
+    else:
+        x = (a - 5) / b
+
+    return x
+
+def pyramid(n):
+    for i in range(1, n + 1):
+        print("  " * (n - i), end="")
+
+        for j in range(i):
+            print(n - i + 1, end=" ")
+
+        print()
+
+a = int(input("Введіть a: "))
+b = int(input("Введіть b: "))
+
+if a > 0 and b > 0:
+    x = calculate(a, b)
+    print("X =", x)
+
+    n = int(input("Введіть N від 1 до 10: "))
+
+    if n >= 1 and n <= 10:
+        pyramid(n)
